@@ -12,19 +12,19 @@ static const char *fonts[]          = { "Ubuntu:weight=bold:size=10:antialias=tr
                                         "JoyPixels:size=10:antialias=true:autohint=true" 
                                       };
 static const char dmenufont[]       	= "monospace:size=11";
-static const char normbgcolor[]       = "#222222";
-static const char normbordercolor[]   = "#444444";
-static const char normfgcolor[]       = "#bbbbbb";
+static const char normbgcolor[]         = "#222222";
+static const char normbordercolor[]     = "#444444";
+static const char normfgcolor[]         = "#bbbbbb";
 static const char selfgcolor[]       	= "#eeeeee";
 static const char selbordercolor[] 		= "#5294e2";
-static const char selbgcolor[] 				= "#5294e2";
+static const char selbgcolor[] 			= "#5294e2";
 static const char titlebordercolor[] 	= "#5294e2";
-static const char titlebgcolor[] 			= "#242424";
-static const char titlefgcolor[] 			= "#eeeeee";
-static const char *colors[][3]      	= {
-	/*             fg             bg           border   */
+static const char titlebgcolor[]        = "#242424";
+static const char titlefgcolor[]        = "#eeeeee";
+static const char *colors[][3]          = {
+	/*               fg           bg           border   */
 	[SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
-	[SchemeSel]  = { selfgcolor, selbgcolor, selbordercolor },
+	[SchemeSel]  = { selfgcolor,  selbgcolor,  selbordercolor },
 	/*[SchemeTitle] = { titlefgcolor, titlebgcolor }, */
 };
 
@@ -38,11 +38,11 @@ static const Rule rules[] = {
 	 */
 	/* class      instance    title       tags mask     isfloating   monitor */
 	{ "Gimp",     NULL,       NULL,       5,            1,           -1 },
-	{ "Firefox",  NULL,       NULL,       2,            0,           -1 },
+	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 };
 
 /* layout(s) */
-static const float mfact     = 0.65; /* factor of master area size [0.05..0.95] */
+static const float mfact     = 0.55; /* factor of master area size [0.05..0.95] */
 static const int nmaster     = 1;    /* number of clients in master area */
 static const int resizehints = 1;    /* 1 means respect size hints in tiled resizals */
 static const int lockfullscreen = 1; /* 1 will force focus on the fullscreen window */
